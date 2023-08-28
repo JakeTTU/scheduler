@@ -1,0 +1,23 @@
+.coming-soon-container {
+    text-align: center;
+    padding: 100px;
+    background-color: #f7f7f7;
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .countdown-item {
+    margin: 0 10px;
+    font-size: 24px;
+  }
+  
+  .countdown-number {
+    font-weight: bold;
+  }
+  
+  /* Add additional styles as needed */
+  

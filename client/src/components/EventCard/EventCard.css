@@ -1,0 +1,20 @@
+.event-card {
+    max-width: 30px;
+    max-height: 20px;
+    /* height: 15px; */
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 12px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 2px;
+    margin-left: 2px;
+  }
+
+  .event-card:hover {
+    opacity: 0.5;
+  }

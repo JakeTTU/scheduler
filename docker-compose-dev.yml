@@ -1,0 +1,47 @@
+version: '3'
+services:
+  mysql-container:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: app
+    volumes:
+      - ./mysql/persistent_data:/var/lib/mysql
+    networks:
+      - schedule-network
+
+  express-container:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 12345
+      MYSQL_DATABASE: app
+      MYSQL_HOST: mysql-container
+      MYSQL_PORT: 3306
+      SERVER_HOST: server-container
+      SERVER_PORT: 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql-container
+    networks:
+      - schedule-network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: pma
+    environment:
+      PMA_HOST: mysql-container
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    restart: always
+    networks:
+      - schedule-network
+    ports:
+      - 8081:80
+
+networks:
+  schedule-network:
+    driver: bridge

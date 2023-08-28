@@ -1,0 +1,194 @@
+/* Overlay style */
+.ReactModal__Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Content style */
+  .ReactModal__Content {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    /* height: 45vh; */
+    max-height: 80vh;
+    overflow: auto;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .select-error {
+    color: gray;
+  }
+
+  
+  input[id="popup-form1"],
+  input[id="popup-form2"],
+  button[id="popup-submit"],
+  button{ /* TODO update in menu and popup to remove this overall styling*/
+    display: block;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  button[id="popup-show-password"],
+  button{ /* TODO update in menu and popup to remove this overall styling*/
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  button[id="popup-show-password"]{
+    margin-left: 10px;
+  }
+
+  select[id="popup-user-role"],
+  select[id="popup-facility-equipment"]{
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  select[id="popup-user-role"],
+  select[id="popup-facility-equipment"],
+  input[id="popup-form1"],
+  input[id="popup-form2"],
+  button[id="popup-submit"],
+  button[id="popup-cancel"]{
+    margin-bottom: 10px;
+  }
+
+  .popup-form{
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+
+  select[id="popup-time-in-minutes"],
+  select[id="popup-time-in-hours"],
+  select[id="popup-time-out-minutes"],
+  select[id="popup-time-out-hours"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+  }
+
+  span[id="popup-time-in-colon"],
+  span[id="popup-time-out-colon"]{
+    font-size: 24px;
+    padding: 3px;
+  }
+
+  span[id="popup-time-in-label"],
+  span[id="popup-time-out-label"]{
+    font-size: 16px;
+    padding: 3px;
+  }
+
+  .popup-label-text{
+    font-size: 16px;
+    padding: 0px 5px 0px 0px;
+  }
+  
+  button#popup-submit{
+    background-color: #536ab4;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: #ccc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[id="popup-dateInput1"],
+  input[id="popup-dateInput2"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+  }
+
+  label[id="popup-dateInput1-label"],
+  label[id="popup-dateInput2-label"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    /* padding: 8px 12px; */
+    font-size: 16px;
+    /* border-radius: 4px; */
+    /* border: 1px solid #ccc; */
+    padding: 0px 5px 0px 0px;
+  }
+
+  div[id=popup-multiDayCheckbox-div],
+  div[id=popup-facility-div]{
+    display: block;
+  }
+
+  div.popup-input-div {
+    display: block;
+  }
+
+  input[id="popup-multiDayCheckbox"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+  }
+
+  label[id="popup-multiDayCheckbox-label"]{
+    display: inline-block;
+    margin-bottom: 10px;
+    /* padding: 8px 12px; */
+    font-size: 16px;
+    /* border-radius: 4px; */
+    /* border: 1px solid #ccc; */
+    padding: 0px 5px 0px 0px;
+  }
+
+  span[id="popup-heading"]{
+    display: block;
+    padding: 0px 0px 15px 0px;
+    font-size: 28px;
+    font-weight: bold;
+    }

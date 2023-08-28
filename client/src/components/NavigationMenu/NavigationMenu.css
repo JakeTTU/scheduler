@@ -1,0 +1,9 @@
+.navigationMenu {
+    font-family: Arial, sans-serif;
+    width: 17.5vw;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+}

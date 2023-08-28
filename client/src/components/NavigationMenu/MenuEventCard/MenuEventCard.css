@@ -1,0 +1,21 @@
+div#event1{
+    background-color: #4e79a7;
+    color: white;
+}
+
+.menu-event-container {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-event-container:hover {
+    opacity: 0.75;
+}
+

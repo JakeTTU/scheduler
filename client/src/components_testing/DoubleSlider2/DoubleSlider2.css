@@ -1,0 +1,207 @@
+/* Styles for the slider container */
+.container {
+    display: flex; /* Add flex display */
+    align-items: center; /* Vertically center the items */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Styles for the range inputs */
+  .thumb {
+    display: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .thumb::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .thumb--left {
+    margin-left: -7px;
+  }
+  
+  .thumb--right {
+    margin-left: -7px;
+  }
+  
+  /* Styles for the slider track */
+  .slider {
+    position: relative;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+    overflow: hidden;
+  }
+  
+  /* Styles for the selected range */
+  .slider__range {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background-color: #007bff;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the slider values */
+  .slider__left-value,
+  .slider__right-value {
+    position: absolute;
+    top: -25px;
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .slider__left-value {
+    left: 0;
+  }
+  
+  .slider__right-value {
+    right: 0;
+  }
+  
+  /* Styles for the slider track and range */
+  .slider__track,
+  .slider__range {
+    width: 100%;
+  }
+  
+  /* Styles for the slider track */
+  .slider__track {
+    height: 100%;
+    background-color: #ddd;
+  }
+  
+  /* Styles for the slider range */
+  .slider__range {
+    background-color: #007bff;
+  }
+  
+  /* Hide the default range input appearance */
+  input[type="range"] {
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set the range input track and thumb styles */
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+    border: none;
+    margin-top: -5px; /* Added to align the thumbs with the slider */
+  }
+  
+  input[type="range"]::-moz-range-track {
+    height: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+    border: none;
+    margin-top: -5px; /* Added to align the thumbs with the slider */
+  }
+  
+  input[type="range"]::-ms-track {
+    height: 5px;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+    border: none;
+    margin-top: -5px; /* Added to align the thumbs with the slider */
+  }
+  
+  /* Adjust the appearance of the range input for Firefox */
+  @-moz-document url-prefix() {
+    input[type="range"] {
+      overflow: hidden;
+      width: 100%;
+      height: 5px;
+      padding: 0;
+      margin: 0;
+      background-color: transparent;
+    }
+  
+    input[type="range"]::-moz-range-progress {
+      background-color: #007bff;
+      height: 100%;
+      border-radius: 5px;
+    }
+  
+    input[type="range"]::-moz-range-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #007bff;
+      cursor: pointer;
+      border: none;
+      margin-top: -5px; /* Added to align the thumbs with the slider */
+    }
+  
+    input[type="range"]::-moz-range-thumb::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+  
+    input[type="range"]::-moz-range-thumb::-moz-range-tooltip {
+      display: none;
+    }
+  
+    input[type="range"]::-moz-focus-outer {
+      border: 0;
+    }
+  
+    input[type="range"]::-moz-range-track {
+      background-color: transparent;
+    }
+  }
+  

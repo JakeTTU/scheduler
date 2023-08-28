@@ -1,0 +1,44 @@
+version: '1'
+services:
+  mysql-container:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: app
+    volumes:
+      - ./mysql/persistent_data:/var/lib/mysql
+    networks:
+      - schedule-network
+
+  express-container:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 12345
+      MYSQL_DATABASE: app
+      MYSQL_HOST: mysql-container
+      MYSQL_PORT: 3306
+      SERVER_HOST: server-container
+      SERVER_PORT: 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql-container
+    networks:
+      - schedule-network
+
+  client-container:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.prod
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql-container
+      - express-container
+
+networks:
+  schedule-network:
+    driver: bridge
