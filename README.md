@@ -7,7 +7,7 @@ This software uses docker to deploy. First download and install [Docker](https:/
 
 ### Deploy Production App
 
-In terminal or cmd set your working directory to `[path]/[to]/git push -u origin main`
+In terminal or cmd set your working directory to `[path]/[to]/scheduler`
 Build the production app using:
 
     docker-compose -f docker-compose-prod.yml build
